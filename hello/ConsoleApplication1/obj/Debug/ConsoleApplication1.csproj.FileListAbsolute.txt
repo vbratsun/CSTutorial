@@ -1,0 +1,5 @@
+C:\CScourse\hello\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\CScourse\hello\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\CScourse\hello\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\CScourse\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\CScourse\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
