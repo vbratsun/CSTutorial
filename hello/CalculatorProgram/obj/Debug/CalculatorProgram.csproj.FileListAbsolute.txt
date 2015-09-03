@@ -1,6 +1,0 @@
-C:\CScourse\hello\CalculatorProgram\obj\Debug\CalculatorProgram.csprojResolveAssemblyReference.cache
-C:\CScourse\hello\CalculatorProgram\bin\Debug\CalculatorProgram.exe.config
-C:\CScourse\hello\CalculatorProgram\bin\Debug\CalculatorProgram.exe
-C:\CScourse\hello\CalculatorProgram\bin\Debug\CalculatorProgram.pdb
-C:\CScourse\hello\CalculatorProgram\obj\Debug\CalculatorProgram.exe
-C:\CScourse\hello\CalculatorProgram\obj\Debug\CalculatorProgram.pdb

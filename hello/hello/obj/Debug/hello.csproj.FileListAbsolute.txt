@@ -1,6 +1,0 @@
-C:\CScourse\hello\hello\bin\Debug\hello.exe.config
-C:\CScourse\hello\hello\bin\Debug\hello.exe
-C:\CScourse\hello\hello\bin\Debug\hello.pdb
-C:\CScourse\hello\hello\obj\Debug\hello.csprojResolveAssemblyReference.cache
-C:\CScourse\hello\hello\obj\Debug\hello.exe
-C:\CScourse\hello\hello\obj\Debug\hello.pdb

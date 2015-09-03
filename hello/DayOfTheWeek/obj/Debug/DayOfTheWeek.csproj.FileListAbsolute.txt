@@ -1,6 +1,0 @@
-C:\CScourse\hello\DayOfTheWeek\bin\Debug\DayOfTheWeek.exe.config
-C:\CScourse\hello\DayOfTheWeek\bin\Debug\DayOfTheWeek.exe
-C:\CScourse\hello\DayOfTheWeek\bin\Debug\DayOfTheWeek.pdb
-C:\CScourse\hello\DayOfTheWeek\obj\Debug\DayOfTheWeek.csprojResolveAssemblyReference.cache
-C:\CScourse\hello\DayOfTheWeek\obj\Debug\DayOfTheWeek.exe
-C:\CScourse\hello\DayOfTheWeek\obj\Debug\DayOfTheWeek.pdb
