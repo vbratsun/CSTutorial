@@ -18,7 +18,8 @@ namespace ClassAndObject
         //методы класса 
         public void fly()
         {
-            for (int i = 0; i < 10; i++)
+            int i = 0; //переменные внутри методов классов - локальные переменные
+            for (i = 0; i < 10; i++)
                 Console.WriteLine("Fly"+i);
         }
 

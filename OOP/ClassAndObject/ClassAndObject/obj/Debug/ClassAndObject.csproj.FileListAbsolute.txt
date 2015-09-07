@@ -5,8 +5,8 @@ D:\CSTraining\OOP\ClassAndObject\ClassAndObject\bin\Debug\ClassAndObject.pdb
 D:\CSTraining\OOP\ClassAndObject\ClassAndObject\obj\Debug\ClassAndObject.exe
 D:\CSTraining\OOP\ClassAndObject\ClassAndObject\obj\Debug\ClassAndObject.pdb
 D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\bin\Debug\ClassAndObject.exe.config
-D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\obj\Debug\ClassAndObject.exe
-D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\obj\Debug\ClassAndObject.pdb
 D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\bin\Debug\ClassAndObject.exe
 D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\bin\Debug\ClassAndObject.pdb
 D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\obj\Debug\ClassAndObject.csprojResolveAssemblyReference.cache
+D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\obj\Debug\ClassAndObject.exe
+D:\CSTutorial\OOP\ClassAndObject\ClassAndObject\obj\Debug\ClassAndObject.pdb
