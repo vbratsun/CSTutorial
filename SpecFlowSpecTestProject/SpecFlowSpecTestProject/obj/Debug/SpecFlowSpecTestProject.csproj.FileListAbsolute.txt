@@ -1,0 +1,9 @@
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\bin\Debug\SpecFlowSpecTestProject.dll.config
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\bin\Debug\SpecFlowSpecTestProject.dll
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\bin\Debug\SpecFlowSpecTestProject.pdb
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\bin\Debug\TechTalk.SpecFlow.dll
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\obj\Debug\SpecFlowSpecTestProject.csprojResolveAssemblyReference.cache
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\obj\Debug\SpecFlowSpecTestProject.dll
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\obj\Debug\SpecFlowSpecTestProject.pdb
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\bin\Debug\nunit.framework.dll
+C:\CScourse\CSTutorial\SpecFlowSpecTestProject\SpecFlowSpecTestProject\bin\Debug\nunit.framework.xml
