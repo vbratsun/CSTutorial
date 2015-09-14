@@ -1,0 +1,6 @@
+D:\CSTutorial\OOP\ClassAndObject\GetSet\obj\Debug\GetSet.csprojResolveAssemblyReference.cache
+D:\CSTutorial\OOP\ClassAndObject\GetSet\bin\Debug\GetSet.exe.config
+D:\CSTutorial\OOP\ClassAndObject\GetSet\bin\Debug\GetSet.exe
+D:\CSTutorial\OOP\ClassAndObject\GetSet\bin\Debug\GetSet.pdb
+D:\CSTutorial\OOP\ClassAndObject\GetSet\obj\Debug\GetSet.exe
+D:\CSTutorial\OOP\ClassAndObject\GetSet\obj\Debug\GetSet.pdb
