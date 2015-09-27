@@ -17,10 +17,6 @@ namespace Lesson2
             Console.WriteLine(a);
             Console.WriteLine(b);
             
-            if (a>0)
-            {
-                c = a + b;
-            }
             Console.WriteLine(c);
 
             
