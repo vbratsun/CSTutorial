@@ -4,3 +4,9 @@ C:\CScourse\hello\SalaryAndBonus\bin\Debug\SalaryAndBonus.exe
 C:\CScourse\hello\SalaryAndBonus\bin\Debug\SalaryAndBonus.pdb
 C:\CScourse\hello\SalaryAndBonus\obj\Debug\SalaryAndBonus.exe
 C:\CScourse\hello\SalaryAndBonus\obj\Debug\SalaryAndBonus.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\SalaryAndBonus\bin\Debug\SalaryAndBonus.exe.config
+C:\CScourse\CSTutorial\PluralSite\hello\SalaryAndBonus\bin\Debug\SalaryAndBonus.exe
+C:\CScourse\CSTutorial\PluralSite\hello\SalaryAndBonus\bin\Debug\SalaryAndBonus.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\SalaryAndBonus\obj\Debug\SalaryAndBonus.csprojResolveAssemblyReference.cache
+C:\CScourse\CSTutorial\PluralSite\hello\SalaryAndBonus\obj\Debug\SalaryAndBonus.exe
+C:\CScourse\CSTutorial\PluralSite\hello\SalaryAndBonus\obj\Debug\SalaryAndBonus.pdb

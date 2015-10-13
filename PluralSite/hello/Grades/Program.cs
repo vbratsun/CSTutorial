@@ -13,6 +13,10 @@ namespace Grades
             GradeBook book = new GradeBook();
             book.AddGrade(91);
             book.AddGrade(89.1f);
+
+            GradeStatistics stats = book.ComputeStatistics();
+                        
+            Console.ReadLine();
         }
     }
 }

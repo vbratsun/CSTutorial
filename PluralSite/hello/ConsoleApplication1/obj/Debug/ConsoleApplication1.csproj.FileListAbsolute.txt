@@ -9,3 +9,9 @@ C:\CScourse\CSTutorial\hello\ConsoleApplication1\bin\Debug\ConsoleApplication1.p
 C:\CScourse\CSTutorial\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\CScourse\CSTutorial\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\CScourse\CSTutorial\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\CScourse\CSTutorial\PluralSite\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\CScourse\CSTutorial\PluralSite\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\CScourse\CSTutorial\PluralSite\hello\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

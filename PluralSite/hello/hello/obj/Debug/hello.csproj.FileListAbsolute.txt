@@ -4,3 +4,9 @@ C:\CScourse\hello\hello\bin\Debug\hello.pdb
 C:\CScourse\hello\hello\obj\Debug\hello.csprojResolveAssemblyReference.cache
 C:\CScourse\hello\hello\obj\Debug\hello.exe
 C:\CScourse\hello\hello\obj\Debug\hello.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\hello\bin\Debug\hello.exe.config
+C:\CScourse\CSTutorial\PluralSite\hello\hello\bin\Debug\hello.exe
+C:\CScourse\CSTutorial\PluralSite\hello\hello\bin\Debug\hello.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\hello\obj\Debug\hello.csprojResolveAssemblyReference.cache
+C:\CScourse\CSTutorial\PluralSite\hello\hello\obj\Debug\hello.exe
+C:\CScourse\CSTutorial\PluralSite\hello\hello\obj\Debug\hello.pdb
