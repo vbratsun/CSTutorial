@@ -65,6 +65,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddCustomer.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\AddCustomer\Customer.cs" />
+    <Compile Include="Features\AddCustomer\Repository.cs" />
     <Compile Include="Features\AddCustomer\Steps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,10 +10,14 @@ namespace SpecFlowSpecTestProject.Features.AddCustomer
     [Binding]
     public class Steps
     {
+        //private Customer _customer;//????
+        //private Repository _repository;//????
+
+                
         [Given(@"a user has entered information about a customer")]
         public void GivenAUserHasEnteredInformationAboutACustomer()
         {
-            ScenarioContext.Current.Pending();
+            var newCustomer = new Customer();                       
         }
 
         [Given(@"she has provided a first name and a last name as required")]
