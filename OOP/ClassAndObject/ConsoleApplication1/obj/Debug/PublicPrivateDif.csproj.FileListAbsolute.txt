@@ -1,0 +1,6 @@
+D:\CSTutorial\OOP\ClassAndObject\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\CSTutorial\OOP\ClassAndObject\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\CSTutorial\OOP\ClassAndObject\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\CSTutorial\OOP\ClassAndObject\ConsoleApplication1\obj\Debug\PublicPrivateDif.csprojResolveAssemblyReference.cache
+D:\CSTutorial\OOP\ClassAndObject\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\CSTutorial\OOP\ClassAndObject\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

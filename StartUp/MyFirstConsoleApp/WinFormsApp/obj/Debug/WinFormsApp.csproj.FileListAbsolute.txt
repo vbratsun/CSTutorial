@@ -1,0 +1,9 @@
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\bin\Debug\WinFormsApp.exe.config
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\bin\Debug\WinFormsApp.exe
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\bin\Debug\WinFormsApp.pdb
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\obj\Debug\WinFormsApp.Form1.resources
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\obj\Debug\WinFormsApp.Properties.Resources.resources
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\obj\Debug\WinFormsApp.csproj.GenerateResource.Cache
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\obj\Debug\WinFormsApp.exe
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\obj\Debug\WinFormsApp.pdb
+D:\CSTutorial\StartUp\MyFirstConsoleApp\WinFormsApp\obj\Debug\WinFormsApp.csprojResolveAssemblyReference.cache
