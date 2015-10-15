@@ -5,17 +5,20 @@ namespace Grades
 {
     public class GradeBook
     {
-        public GradeBook()
-        {
-            grades = new List<float>();
-        }
-
+        
         public void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100)
             {
                 grades.Add(grade);
             } 
+        }
+
+        public GradeBook(string name = "There is no name")
+        {
+            _name = name;
+            grades = new List<float>();
+
         }
 
         public GradeStatistics ComputeStatistics()
@@ -37,7 +40,33 @@ namespace Grades
             return stats;
         }
 
-        public string Name;
+        private string _name;
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (_name != value)
+                {
+                    var oldValue = _name;
+                    _name = value;
+                    if (NameChanged != null)
+                    {
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.OldValue = oldValue;
+                        args.NewValue = value;
+                        NameChanged(this, args);
+                    }
+                }
+
+            }
+        }
+
+        public NamedChangedDelegate NameChanged;
 
         private List<float> grades;
         
