@@ -1,0 +1,7 @@
+C:\CScourse\CSTutorial\PluralSite\hello\Grades.Tests\bin\Debug\Grades.Tests.dll
+C:\CScourse\CSTutorial\PluralSite\hello\Grades.Tests\bin\Debug\Grades.Tests.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\Grades.Tests\obj\Debug\Grades.Tests.csprojResolveAssemblyReference.cache
+C:\CScourse\CSTutorial\PluralSite\hello\Grades.Tests\obj\Debug\Grades.Tests.dll
+C:\CScourse\CSTutorial\PluralSite\hello\Grades.Tests\obj\Debug\Grades.Tests.pdb
+C:\CScourse\CSTutorial\PluralSite\hello\Grades.Tests\bin\Debug\Grades.exe
+C:\CScourse\CSTutorial\PluralSite\hello\Grades.Tests\bin\Debug\Grades.pdb

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades", "Grades\Grades.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{F96AD79E-7877-47B3-8032-FCF329F59A8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades.Tests", "Grades.Tests\Grades.Tests.csproj", "{19C58CED-AF01-489E-AA44-C2AE2519F674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{F96AD79E-7877-47B3-8032-FCF329F59A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F96AD79E-7877-47B3-8032-FCF329F59A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F96AD79E-7877-47B3-8032-FCF329F59A8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C58CED-AF01-489E-AA44-C2AE2519F674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C58CED-AF01-489E-AA44-C2AE2519F674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C58CED-AF01-489E-AA44-C2AE2519F674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C58CED-AF01-489E-AA44-C2AE2519F674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
