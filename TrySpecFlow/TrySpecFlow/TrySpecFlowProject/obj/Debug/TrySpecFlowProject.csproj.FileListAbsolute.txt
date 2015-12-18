@@ -1,0 +1,5 @@
+D:\CSTutorial\TrySpecFlow\TrySpecFlow\TrySpecFlowProject\bin\Debug\TrySpecFlowProject.dll
+D:\CSTutorial\TrySpecFlow\TrySpecFlow\TrySpecFlowProject\bin\Debug\TrySpecFlowProject.pdb
+D:\CSTutorial\TrySpecFlow\TrySpecFlow\TrySpecFlowProject\obj\Debug\TrySpecFlowProject.csprojResolveAssemblyReference.cache
+D:\CSTutorial\TrySpecFlow\TrySpecFlow\TrySpecFlowProject\obj\Debug\TrySpecFlowProject.dll
+D:\CSTutorial\TrySpecFlow\TrySpecFlow\TrySpecFlowProject\obj\Debug\TrySpecFlowProject.pdb
