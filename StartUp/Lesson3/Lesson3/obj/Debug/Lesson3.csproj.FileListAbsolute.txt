@@ -1,1 +1,2 @@
 D:\CSTutorial\StartUp\Lesson3\Lesson3\bin\Debug\Lesson3.exe.config
+C:\CScourse\CSTutorial\StartUp\Lesson3\Lesson3\bin\Debug\Lesson3.exe.config

@@ -10,10 +10,36 @@ namespace ConsoleApplication1
     {
         static void Main()
         {
-            string st = "$10";
-            st = st.Remove(0, 1);
-            var stNew = st;
-            return;
+            int[] array = {1,2,3,4,5,6,7,9};
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                Console.Write(array[i]+" ");
+            }
+
+            Console.WriteLine();
+
+            int summ = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                double iC = i % 2;
+                
+                if (! (iC == 0) )
+                {
+                    Console.Write(array[i] + " ");
+                    summ = summ + array[i];                    
+                }
+                             
+            }
+            Console.WriteLine();
+            Console.WriteLine(summ);
+
+            foreach (int j in array)
+            {
+                Console.Write(j + " ");
+            }
+            
+            Console.ReadKey();
 
         }
     }
