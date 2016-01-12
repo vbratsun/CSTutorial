@@ -6,53 +6,30 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.IE;
 using NUnit.Framework;
+using System.Threading;
 
 namespace TrySelenium
 {
     [TestFixture]
     public class Class1
     {
-
-        IWebDriver driver;
-
-        [SetUp]
-
-        public void Setup()
-        {
-            driver = new InternetExplorerDriver();
-        }
-
-        [TearDown]
-
-        public void Teardown()
-        {
-            driver.Quit();
-        }
+        IWebDriver driver = new InternetExplorerDriver();
         
-        [Test]
-
-        public void SearchYandex()
+        [Test]       
+        public void OpenVK()
         {
 
-            //Navigate to the site
-
-            driver.Navigate().GoToUrl("http://www.yandex.ru");
-
-            //Find the Element and create an object so we can use it
-
-            IWebElement queryBox = driver.FindElement(By.Name("text"));
-
-            //Work with the Element that's on the page
-
-            queryBox.SendKeys("Selenium");
-
-            //queryBox.SendKeys(Keys.ArrowDown);
-
-            queryBox.Submit();
-
-            //Check that the Title is what we are expecting
+            driver.Navigate().GoToUrl("http://vk.com/");
             
-            Assert.True(driver.Title.IndexOf("Selenium") > -1);
+            Thread.Sleep(3000);
+
+            By _titleLocator = By.XPath("//*[@id='title']");
+
+            string pageTitleText = driver.FindElement(_titleLocator).Text;
+           
+            string expectedText = "Добро пожаловать";
+
+            Assert.AreEqual(pageTitleText, expectedText);
 
         }
 
