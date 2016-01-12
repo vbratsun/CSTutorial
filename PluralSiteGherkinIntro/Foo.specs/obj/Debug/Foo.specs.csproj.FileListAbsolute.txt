@@ -1,0 +1,9 @@
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\bin\Debug\Foo.specs.dll.config
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\bin\Debug\Foo.specs.dll
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\bin\Debug\Foo.specs.pdb
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\bin\Debug\nunit.framework.dll
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\bin\Debug\TechTalk.SpecFlow.dll
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\bin\Debug\nunit.framework.xml
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\obj\Debug\Foo.specs.dll
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\obj\Debug\Foo.specs.pdb
+C:\CScourse\CSTutorial\PluralSiteGherkinIntro\Foo.specs\obj\Debug\Foo.specs.csprojResolveAssemblyReference.cache
