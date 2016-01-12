@@ -1,0 +1,11 @@
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\TrySelenium.dll.config
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\TrySelenium.dll
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\TrySelenium.pdb
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\nunit.framework.dll
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\TechTalk.SpecFlow.dll
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\nunit.framework.xml
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.csprojResolveAssemblyReference.cache
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.dll
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.pdb
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.dll
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.xml
