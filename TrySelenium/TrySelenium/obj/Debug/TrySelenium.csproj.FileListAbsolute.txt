@@ -20,12 +20,3 @@ D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.xml
 D:\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.dll
 D:\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.pdb
 D:\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.csprojResolveAssemblyReference.cache
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\Selenium.WebDriverBackedSelenium.dll
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\ThoughtWorks.Selenium.Core.dll
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.Support.dll
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\Selenium.WebDriverBackedSelenium.pdb
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\Selenium.WebDriverBackedSelenium.xml
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\ThoughtWorks.Selenium.Core.pdb
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\ThoughtWorks.Selenium.Core.xml
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.Support.pdb
-D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.Support.xml
