@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.IE;
 using NUnit.Framework;
 using System.Threading;
+using OpenQA.Selenium.Firefox;
 
 
 namespace TrySelenium
@@ -17,6 +18,8 @@ namespace TrySelenium
         public void OpenGoogle()
         {
             IWebDriver driver = new InternetExplorerDriver();
+            //IWebDriver driver = new FirefoxDriver();
+            
             driver.Navigate().GoToUrl("http://www.google.com/");
             IWebElement query = driver.FindElement(By.Name("q"));
             query.SendKeys("Cheese");
