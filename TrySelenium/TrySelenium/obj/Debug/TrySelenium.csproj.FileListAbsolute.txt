@@ -22,3 +22,5 @@ D:\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.Support.xml
 D:\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.csprojResolveAssemblyReference.cache
 D:\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.dll
 D:\CSTutorial\TrySelenium\TrySelenium\obj\Debug\TrySelenium.pdb
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.Support.dll
+C:\CScourse\CSTutorial\TrySelenium\TrySelenium\bin\Debug\WebDriver.Support.xml

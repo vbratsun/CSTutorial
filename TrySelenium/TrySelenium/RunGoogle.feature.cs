@@ -73,6 +73,12 @@ namespace TrySelenium
 this.ScenarioSetup(scenarioInfo);
 #line 4
  testRunner.Given("open the google web site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 5
+ testRunner.When("the text \'cheers\' is typed in search box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 6
+ testRunner.And("search button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 7
+ testRunner.Then("opened page contains \'About 191,000,000 results\' text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
