@@ -63,11 +63,14 @@ namespace TrySelenium
 
             Thread.Sleep(1000);
 
-            string sentText = driver.FindElement(By.ClassName("im_msg_text")).Text;
-
             string expectedText = ScenarioContext.Current["sentMessage"] as string;
+            
+            Thread.Sleep(2000);
 
-            Assert.AreEqual(sentText, expectedText);
+            var sentText = driver.FindElement(By.XPath("//*[contains(text(), 'Hello my friend')]")).Text;
+
+            Assert.AreEqual(expectedText, sentText);
+            
         }
     }
 }
