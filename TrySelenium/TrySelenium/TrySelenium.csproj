@@ -75,6 +75,8 @@
       <DependentUpon>RunGoogle.feature</DependentUpon>
     </Compile>
     <Compile Include="RunGoogleSteps.cs" />
+    <Compile Include="ScenarioBeforeAndAfter.cs" />
+    <Compile Include="WebBrowser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
