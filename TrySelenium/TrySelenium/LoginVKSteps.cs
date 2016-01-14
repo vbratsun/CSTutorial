@@ -66,11 +66,31 @@ namespace TrySelenium
         {
             var driver = ScenarioContext.Current["driver"] as IWebDriver;
 
+            string expectedURL = "http://vk.com/id" + p0;
             string currentPageURL = driver.Url;
 
-            Console.WriteLine(currentPageURL);
+            Console.WriteLine("expected: " + expectedURL);
+            Console.WriteLine("current: " + currentPageURL);
 
-
+            Assert.AreEqual(expectedURL, currentPageURL);
         }
+
+        [Then(@"close browser window")]
+        public void ThenCloseBrowserWindow()
+        {
+            var driver = ScenarioContext.Current["driver"] as IWebDriver;
+            driver.Quit();
+        }
+
+        [Then(@"the '(.*)' text is displayed")]
+        public void ThenTheTextIsDisplayed(string p0)
+        {
+            var driver = ScenarioContext.Current["driver"] as IWebDriver;
+
+            string errorMessage = driver.FindElement(By.XPath("//*[@id='message']/b[1]")).Text;
+
+            Assert.AreEqual(p0,errorMessage);
+        }
+
     }
 }
