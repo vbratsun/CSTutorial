@@ -27,7 +27,7 @@ namespace TrySelenium
             //var driver = ScenarioContext.Current.Get<IWebDriver>(driver); //??????????????????
             var driver = ScenarioContext.Current["driver"] as IWebDriver;
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             driver.FindElement(By.Id("im_dialog18744588")).Click(); 
         }
@@ -37,7 +37,7 @@ namespace TrySelenium
         {
             var driver = ScenarioContext.Current["driver"] as IWebDriver;
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             var messageEditBox = driver.FindElement(By.Id("im_editable18744588"));
 
@@ -51,7 +51,7 @@ namespace TrySelenium
         {
             var driver = ScenarioContext.Current["driver"] as IWebDriver;
             
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             driver.FindElement(By.Id("im_send")).Click();
         }
@@ -61,7 +61,7 @@ namespace TrySelenium
         {
             var driver = ScenarioContext.Current["driver"] as IWebDriver;
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             string expectedText = ScenarioContext.Current["sentMessage"] as string;
             
@@ -69,8 +69,7 @@ namespace TrySelenium
 
             var sentText = driver.FindElement(By.XPath("//*[contains(text(), 'Hello my friend')]")).Text;
 
-            Assert.AreEqual(expectedText, sentText);
-            
+            Assert.AreEqual(expectedText, sentText);            
         }
     }
 }
