@@ -112,6 +112,8 @@ namespace TrySelenium
 
             //2nd variant after adding WebBrowser class
             string errorMessage = WebBrowser.Current.FindElement(By.XPath("//*[@id='message']/b[1]")).Text;
+            var editBoxText = WebBrowser.Current.FindElement(By.Id("email")).GetAttribute("value");
+            Console.WriteLine(editBoxText);
             Assert.AreEqual(p0,errorMessage);
         }
 

@@ -1,0 +1,13 @@
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\obj\Debug\eVelopersTestTaskPart1.csprojResolveAssemblyReference.cache
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\eVelopersTestTaskPart1.dll
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\eVelopersTestTaskPart1.pdb
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\nunit.framework.dll
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\WebDriver.dll
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\WebDriver.Support.dll
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\nunit.framework.xml
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\WebDriver.xml
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\WebDriver.Support.xml
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\obj\Debug\eVelopersTestTaskPart1.dll
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\obj\Debug\eVelopersTestTaskPart1.pdb
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\eVelopersTestTaskPart1.dll.config
+D:\CSTutorial\eVelopersTestTaskPart1\eVelopersTestTaskPart1\bin\Debug\TechTalk.SpecFlow.dll
