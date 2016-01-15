@@ -111,6 +111,40 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("try click messages link")]
+        public virtual void TryClickMessagesLink()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("try click messages link", ((string[])(null)));
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line 21
+testRunner.Given("user opens vk start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 22
+testRunner.And("user opens messages link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Click over the left bar menus")]
+        [NUnit.Framework.TestCaseAttribute("My Page", "Smile Станиславович", null)]
+        [NUnit.Framework.TestCaseAttribute("My Friends", "Все друзья", null)]
+        public virtual void ClickOverTheLeftBarMenus(string leftBarTab, string tabName, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click over the left bar menus", exampleTags);
+#line 24
+this.ScenarioSetup(scenarioInfo);
+#line 25
+testRunner.Given("user opens vk start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
+testRunner.When(string.Format("user opens {0}", leftBarTab), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+testRunner.Then(string.Format("the page contains {0}", tabName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

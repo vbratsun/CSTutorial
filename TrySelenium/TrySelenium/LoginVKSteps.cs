@@ -117,5 +117,50 @@ namespace TrySelenium
             Assert.AreEqual(p0,errorMessage);
         }
 
+        [Given(@"user opens messages link")]
+        public void GivenUserOpensMessagesLink()
+        {
+            var messages = WebBrowser.Current.FindElement(By.Id("l_msg"));
+            messages.Click();
+
+            var dialogs = WebBrowser.Current.FindElement(By.XPath("//*[@id='tab_dialogs']/a/b[3]"));
+            var dialogsText = dialogs.Text;
+            Console.WriteLine(dialogsText);
+        }
+
+        [When(@"user opens '(.*)'")]
+        public void WhenUserOpensMyPage(string openingTab)
+        {
+            switch (openingTab)
+            {
+                case "My Page":
+                var myPage = WebBrowser.Current.FindElement(By.XPath("//*[@id='myprofile']/span"));
+                myPage.Click();
+                    break;
+
+                case "My Friends":
+                var myFriends = WebBrowser.Current.FindElement(By.XPath("//*[@id='l_fr']/a/span/span[2]"));
+                myFriends.Click();
+                    break;
+            }
+        }
+
+        [Then(@"the page contains '(.*)'")]
+        public void ThenThePageContainsSmileСтаниславович(string openedTab)
+        {
+            switch (openedTab)
+            { 
+                case "Smile Станиславович":
+                    var owner = WebBrowser.Current.FindElement(By.XPath("//*[@id='profile_info']/h4/div[1]")).Text;
+                    Assert.AreEqual(openedTab, owner);
+                    break;
+
+                case "Все друзья":
+                    var friends = WebBrowser.Current.FindElement(By.XPath("//*[@id='tab_all']/a/b[3]")).Text;
+                    Assert.AreEqual(openedTab, friends);
+                    break;
+            }
+        }
+
     }
 }
