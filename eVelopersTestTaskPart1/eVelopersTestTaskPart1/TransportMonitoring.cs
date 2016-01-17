@@ -24,6 +24,8 @@ namespace eVelopersTestTaskPart1
         private readonly By _signInButtonLocator = By.Id("button-1012-btnEl");
         private readonly By _signOutButtonLocator = By.Id("logoutButton");
         private readonly By _loginFormHeaderLocator = By.Id("login-panel_header_hd-textEl");
+        private readonly By _observeObjectsTabLocator = By.Id("tab-1173-btnEl");
+        private readonly By _isOnlineLocator = By.XPath("//*[@id='ext-gen1774']/td[2]/div");
         #endregion
 
         IWebDriver ieDriver = new InternetExplorerDriver();
@@ -43,6 +45,13 @@ namespace eVelopersTestTaskPart1
             var signInButton = ieDriver.FindElement(_signInButtonLocator);
             signInButton.Click();
             Thread.Sleep(9000);
+
+            var observeObjectsTab = ieDriver.FindElement(_observeObjectsTabLocator);
+            observeObjectsTab.Click();
+            Thread.Sleep(9000);
+
+            var isOnline = ieDriver.FindElement(_isOnlineLocator).Text;
+            Assert.AreEqual("Да", isOnline);
 
             var signOutButton = ieDriver.FindElement(_signOutButtonLocator);
             signOutButton.Click();
