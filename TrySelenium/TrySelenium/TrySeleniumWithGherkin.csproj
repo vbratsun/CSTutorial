@@ -54,14 +54,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
     <Compile Include="LoginVK.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginVK.feature</DependentUpon>
     </Compile>
     <Compile Include="LoginVKSteps.cs" />
+    <Compile Include="NavigationSteps.cs" />
     <Compile Include="OpenVkWeb.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,7 +78,9 @@
     <Compile Include="WebBrowser.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="LoginVK.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoginVK.feature.cs</LastGenOutput>
