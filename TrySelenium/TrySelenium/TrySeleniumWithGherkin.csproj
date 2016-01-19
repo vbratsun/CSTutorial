@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="OpenVkWebSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationPage.cs" />
     <Compile Include="RunGoogle.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

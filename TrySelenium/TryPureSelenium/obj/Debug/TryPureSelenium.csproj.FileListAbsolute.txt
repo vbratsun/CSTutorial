@@ -9,3 +9,5 @@ C:\CScourse\CSTutorial\TrySelenium\TryPureSelenium\bin\Debug\nunit.framework.xml
 C:\CScourse\CSTutorial\TrySelenium\TryPureSelenium\bin\Debug\WebDriver.xml
 C:\CScourse\CSTutorial\TrySelenium\TryPureSelenium\obj\Debug\TryPureSelenium.dll
 C:\CScourse\CSTutorial\TrySelenium\TryPureSelenium\obj\Debug\TryPureSelenium.pdb
+C:\CScourse\CSTutorial\TrySelenium\TryPureSelenium\bin\Debug\WebDriver.Support.dll
+C:\CScourse\CSTutorial\TrySelenium\TryPureSelenium\bin\Debug\WebDriver.Support.xml
