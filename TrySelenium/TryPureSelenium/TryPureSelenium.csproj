@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16082F9E-50B6-41F0-B1AD-5ED6F23C9256}</ProjectGuid>
+    <ProjectGuid>{2F88C7D2-2B3A-4446-BED0-0D6D8D464250}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TrySelenium</RootNamespace>
-    <AssemblyName>TrySelenium</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>TryPureSelenium</RootNamespace>
+    <AssemblyName>TryPureSelenium</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,51 +47,18 @@
     <Reference Include="WebDriver">
       <HintPath>..\packages\Selenium.WebDriver.2.48.2\lib\net40\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=2.48.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="WebDriver.Support">
       <HintPath>..\packages\Selenium.Support.2.48.2\lib\net40\WebDriver.Support.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Class2.cs" />
-    <Compile Include="LoginVK.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LoginVK.feature</DependentUpon>
-    </Compile>
-    <Compile Include="LoginVKSteps.cs" />
-    <Compile Include="OpenVkWeb.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OpenVkWeb.feature</DependentUpon>
-    </Compile>
-    <Compile Include="OpenVkWebSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunGoogle.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RunGoogle.feature</DependentUpon>
-    </Compile>
-    <Compile Include="RunGoogleSteps.cs" />
-    <Compile Include="ScenarioBeforeAndAfter.cs" />
-    <Compile Include="WebBrowser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="LoginVK.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>LoginVK.feature.cs</LastGenOutput>
-    </None>
-    <None Include="OpenVkWeb.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>OpenVkWeb.feature.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
-    <None Include="RunGoogle.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>RunGoogle.feature.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

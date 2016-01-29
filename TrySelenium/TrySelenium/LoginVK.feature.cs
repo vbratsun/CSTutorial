@@ -64,26 +64,34 @@ namespace TrySelenium
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 3
+#line 4
+ testRunner.Given("user opens vk start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("login to vk with correct credentials")]
         public virtual void LoginToVkWithCorrectCredentials()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("login to vk with correct credentials", ((string[])(null)));
-#line 3
-this.ScenarioSetup(scenarioInfo);
-#line 4
- testRunner.Given("user opens vk start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 5
- testRunner.And("email field is filled in with \'bratsun@rambler.ru\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 6
- testRunner.And("password field is filled in with \'siemenssk65\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 3
+this.FeatureBackground();
 #line 7
- testRunner.When("sign in button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("email field is filled in with \'bratsun@rambler.ru\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
- testRunner.Then("user loged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("password field is filled in with \'siemenssk65\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.And("url contains account id \'18744588\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("sign in button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
+ testRunner.Then("user loged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ testRunner.And("url contains account id \'18744588\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
  testRunner.And("close browser window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -94,19 +102,19 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void LoginToVkWithIncorrectCredentials()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("login to vk with incorrect credentials", ((string[])(null)));
-#line 12
-this.ScenarioSetup(scenarioInfo);
-#line 13
- testRunner.Given("user opens vk start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
- testRunner.And("email field is filled in with \'bratsun@rambler.ru\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 3
+this.FeatureBackground();
 #line 15
- testRunner.And("password field is filled in with \'password\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("email field is filled in with \'bratsun@rambler.ru\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.When("sign in button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("password field is filled in with \'password\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
- testRunner.Then("the \'Не удается войти.\' text is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("sign in button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
+ testRunner.Then("the \'Не удается войти.\' text is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
  testRunner.And("close browser window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -117,31 +125,12 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void TryClickMessagesLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("try click messages link", ((string[])(null)));
-#line 20
-this.ScenarioSetup(scenarioInfo);
 #line 21
-testRunner.Given("user opens vk start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 22
-testRunner.And("user opens messages link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Click over the left bar menus")]
-        [NUnit.Framework.TestCaseAttribute("My Page", "Smile Станиславович", null)]
-        [NUnit.Framework.TestCaseAttribute("My Friends", "Все друзья", null)]
-        public virtual void ClickOverTheLeftBarMenus(string leftBarTab, string tabName, string[] exampleTags)
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click over the left bar menus", exampleTags);
-#line 24
 this.ScenarioSetup(scenarioInfo);
-#line 25
-testRunner.Given("user opens vk start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
-testRunner.When(string.Format("user opens {0}", leftBarTab), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
-testRunner.Then(string.Format("the page contains {0}", tabName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 3
+this.FeatureBackground();
+#line 22
+ testRunner.And("user opens messages link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

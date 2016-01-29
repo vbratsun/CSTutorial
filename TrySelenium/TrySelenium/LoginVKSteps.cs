@@ -10,19 +10,6 @@ namespace TrySelenium
     [Binding]
     public class LoginVKSteps
     {
-        [Given(@"user opens vk start page")]
-        public void GivenUserOpensVkStartPage()
-        {
-            //1st way without refactoring:
-            //IWebDriver driver = new InternetExplorerDriver();
-            //ScenarioContext.Current.Add("driver", driver);
-            //driver.Navigate().GoToUrl("http://vk.com");
-            
-            //2nd variant after adding WebBrowser class
-            WebBrowser.Current.Navigate().GoToUrl("http://vk.com");
-
-        }
-        
         [Given(@"email field is filled in with '(.*)'")]
         public void GivenEmailFieldIsFilledInWith(string login)
         {
