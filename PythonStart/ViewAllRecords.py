@@ -10,7 +10,15 @@ while True:
         #for eachLine in file:
         list = [line.strip() for line in file]
         file.close()
-        print(list)
+        print(list) #просто вывод списка
+        print()
+        for record in list:#вывод списка построчно
+            #print(record)
+            formatRecord = record.replace("|"," ")
+            print(formatRecord)
+            #formatRecord = record.split("|")
+            #for item in formatRecord:
+            #    print(item)
 
     else:
         print("Error: No such command. Please try again.")

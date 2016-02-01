@@ -32,9 +32,13 @@ while True:
     elif action=="ViewAll":
         file = open('Notebook.txt','r')
         print()
-        print(file.read())
-        print()
+        list = [line.strip() for line in file]
         file.close()
+        print()
+        for record in list:
+            formatRecord = record.replace("|"," ")
+            print(formatRecord)
+        print()
 
     elif action=="AddNew":
         print()
