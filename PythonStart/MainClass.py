@@ -1,6 +1,10 @@
+from datetime import datetime, date, time
 from builtins import print
 
 print("This is the notebook.")
+print()
+print("Today is ")
+print(datetime.today())
 print()
 print("    Following actions are availabe:")
 print("    To check all the records in notebook type - ViewAll")
