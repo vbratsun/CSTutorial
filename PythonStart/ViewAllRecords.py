@@ -4,8 +4,13 @@ while True:
     expected = "ViewAll"
     if expected==viewAll:
         file = open('Notebook.txt','r')
-        print(file.read())
+        #print(file.read())
+        #file.close()
+        #break
+        #for eachLine in file:
+        list = [line.strip() for line in file]
         file.close()
-        break
+        print(list)
+
     else:
         print("Error: No such command. Please try again.")
