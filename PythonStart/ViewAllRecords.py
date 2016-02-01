@@ -10,13 +10,16 @@ while True:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
-            print("Error: Notebook file is not found!")
+            print("Error: File with data is not found!")
+            print("*Use AddNew command to create first record in new data file")
         else:
             with file:
                 file = open('Notebook.txt','r')
                 list = [line.strip() for line in file]
                 file.close()
                 #print(list) #просто вывод списка
+                rowCount = len(list)
+                print(rowCount)
                 print()
                 for record in list:#вывод списка построчно
                     formatRecord = record.replace("|"," ")

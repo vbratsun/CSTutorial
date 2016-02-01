@@ -19,7 +19,7 @@ recordLine = surname + " " + name + " " + secondName + "| " + phone + "| " + dob
 print("The following new record will be added to notebook:")
 print(recordLine)
 
-file = open('Notebook.txt','w')
+file = open('NotebookTest.txt','w')
 
 file.write(recordLine)
 file.close()

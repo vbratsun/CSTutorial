@@ -38,7 +38,8 @@ while True:
             file = open('Notebook.txt','r')
         except IOError as e:
             print()
-            print("Error: Notebook file is not found!")
+            print("Error: File with data is not found!")
+            print("*Use AddNew command to create first record in new data file")
             print()
         else:
             with file:
@@ -46,7 +47,7 @@ while True:
                 print()
                 list = [line.strip() for line in file]
                 file.close()
-                #print()
+                rowCount = len(list)#это каунтер строк в книжке
                 for record in list:
                     formatRecord = record.replace("|"," ")
                     print(formatRecord)
