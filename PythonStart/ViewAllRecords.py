@@ -1,9 +1,11 @@
 print ("To check all the records in notebook type - ViewAll")
-viewAll = input()
-expected = "ViewAll"
-if viewAll==expected:
-    file = open('Notebook.txt','r')
-    print(file.read())
-    file.close()
-else:
-    print("Error: No such command")
+while True:
+    viewAll = input()
+    expected = "ViewAll"
+    if expected==viewAll:
+        file = open('Notebook.txt','r')
+        print(file.read())
+        file.close()
+        break
+    else:
+        print("Error: No such command. Please try again.")
