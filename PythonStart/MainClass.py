@@ -30,15 +30,23 @@ while True:
         quit()
 
     elif action=="ViewAll":
-        file = open('Notebook.txt','r')
-        print()
-        list = [line.strip() for line in file]
-        file.close()
-        print()
-        for record in list:
-            formatRecord = record.replace("|"," ")
-            print(formatRecord)
-        print()
+        try:
+            file = open('Notebook.txt','r')
+        except IOError as e:
+            print()
+            print("Error: Notebook file is not found!")
+            print()
+        else:
+            with file:
+                file = open('Notebook.txt','r')
+                print()
+                list = [line.strip() for line in file]
+                file.close()
+                #print()
+                for record in list:
+                    formatRecord = record.replace("|"," ")
+                    print(formatRecord)
+                print()
 
     elif action=="AddNew":
         print()

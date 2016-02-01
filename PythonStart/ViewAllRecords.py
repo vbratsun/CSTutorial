@@ -3,22 +3,20 @@ while True:
     viewAll = input()
     expected = "ViewAll"
     if expected==viewAll:
-        file = open('Notebook.txt','r')
-        #print(file.read())
-        #file.close()
-        #break
-        #for eachLine in file:
-        list = [line.strip() for line in file]
-        file.close()
-        print(list) #просто вывод списка
-        print()
-        for record in list:#вывод списка построчно
-            #print(record)
-            formatRecord = record.replace("|"," ")
-            print(formatRecord)
-            #formatRecord = record.split("|")
-            #for item in formatRecord:
-            #    print(item)
+        try:
+            file = open('Notebook.txt','r')
+        except IOError as e:
+            print("Error: Notebook file is not found!")
+        else:
+            with file:
+                file = open('Notebook.txt','r')
+                list = [line.strip() for line in file]
+                file.close()
+                #print(list) #просто вывод списка
+                print()
+                for record in list:#вывод списка построчно
+                    formatRecord = record.replace("|"," ")
+                    print(formatRecord)
 
     else:
         print("Error: No such command. Please try again.")
