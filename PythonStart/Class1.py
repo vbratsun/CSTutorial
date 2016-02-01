@@ -1,0 +1,7 @@
+print("Hello")
+print(3+4)
+print(3-4)
+print(3*4)
+print(3/4)
+name = input("what's your name?")
+print ("hello ", name)
