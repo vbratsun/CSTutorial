@@ -1,1 +1,5 @@
-0|w w w|w|w
+0|Vlad Alex Bratsun|+79811085596|03.06.1986
+1|Victor Alex Bratsun|+79811085597|04.07.1985
+2|Victor Sergeevich Ivanov|+79811485597|05.04.19813
+3|Petrov Alexandr Ivanovich|+79811088898|09.05.1999
+4|Sidorov Genadii Mihailovich|+79811085656|03.03.1986
