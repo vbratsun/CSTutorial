@@ -3,7 +3,7 @@ from builtins import print
 
 print("This is the notebook.")
 print()
-print("Today is "+ str(datetime.today()))
+print("Today is "+ str(date.today()))
 print()
 print("    Following actions are availabe:")
 print("    To check all the records in notebook type - ViewAll")
@@ -11,6 +11,7 @@ print("    To add new record type  - AddNew ")
 print("    To delete existing record type - DeleteOne")
 print("    To get help type - Help")
 print("    To exit the notebook type - Quit")
+print("    To check if anyone has birthday type - Bday")
 print()
 
 while True:
@@ -25,6 +26,7 @@ while True:
         print("    To delete existing record type - DeleteOne")
         print("    To get help type - Help")
         print("    To exit the notebook type - Quit")
+        print("    To check if anyone has birthday type - Bday")
         print()
 
     elif action==leave:

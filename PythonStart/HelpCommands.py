@@ -9,6 +9,7 @@ while True:
         print ("To delete existing record type - DeleteOne")
         print ("To get help type - Help")
         print ("To exit the notebook type - Quit")
+        print("    To check if anyone has birthday type - Bday")
         break
     else:
         print("Error: No such command. Please try again.")
