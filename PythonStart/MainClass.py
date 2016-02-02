@@ -122,7 +122,7 @@ while True:
                 print("Fill in the Day of birth(dd.mm.yyyy):")
                 dob = input()
 
-                planeRecordLine = surname + " " + name + " " + secondName + " " + phone + " " + dob
+                planeRecordLine = str(rowCount) + " " + surname + " " + name + " " + secondName + " " + phone + " " + dob
                 print()
                 print("The following new record was added to notebook:")
                 print(planeRecordLine)
@@ -161,27 +161,33 @@ while True:
                         print(formatRecord)
                         print()
                     print("Enter the number of record to delete:")
-                    deleteRowNumber = int(input())
-
-                    if deleteRowNumber >= 0 and deleteRowNumber < rowCount:
-                        updatedRecordList = recordList
-                        recordToDelete = updatedRecordList.pop(deleteRowNumber)
+                    try:
+                        deleteRowNumber = int(input())
+                    except ValueError as e:
                         print()
-                        print("Following record was removed frome notebook:")
+                        print("Only integer is allowed!")
                         print()
-                        print(recordToDelete.replace("|"," "))
-                        file = open('Notebook.txt','w')
-                        i=-1
-                        for record in updatedRecordList:
-                            i=i+1
-                            subRecord = record.split("|")
-                            subRecord.__delitem__(0)
-                            subRecord.insert(0,str(i))
-                            file.write("|".join(subRecord) + '\n')
-
-                        file.close()
                     else:
-                        print("No record with such number")
+                        if deleteRowNumber >= 0 and deleteRowNumber < rowCount:
+                            updatedRecordList = recordList
+                            recordToDelete = updatedRecordList.pop(deleteRowNumber)
+                            print()
+                            print("Following record was removed frome notebook:")
+                            print()
+                            print(recordToDelete.replace("|"," "))
+                            file = open('Notebook.txt','w')
+                            i=-1
+                            for record in updatedRecordList:
+                                i=i+1
+                                subRecord = record.split("|")
+                                subRecord.__delitem__(0)
+                                subRecord.insert(0,str(i))
+                                file.write("|".join(subRecord) + '\n')
+                            file.close()
+                        else:
+                            print()
+                            print("No record with such number")
+                            print()
 
     else:
         print()

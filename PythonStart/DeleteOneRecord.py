@@ -27,25 +27,29 @@ while True:
                         print(formatRecord)
                         print()
                     print("Enter the number of record to delete:")
-                    deleteRowNumber = int(input())
-
-                    if deleteRowNumber >= 0 and deleteRowNumber < rowCount:
-                        updatedRecordList = recordList
-                        recordToDelete = updatedRecordList.pop(deleteRowNumber)
-                        print("Following record was removed frome notebook:")
-                        print(recordToDelete.replace("|"," "))
-                        file = open('NotebookTest.txt','w')
-                        i=-1
-                        for record in updatedRecordList:
-                            i=i+1
-                            subRecord = record.split("|")
-                            subRecord.__delitem__(0)
-                            subRecord.insert(0,str(i))
-                            file.write("|".join(subRecord) + '\n')
-
-                        file.close()
+                    try:
+                        deleteRowNumber = int(input())
+                    except ValueError as e:
+                        print()
+                        print("Only integer is allowed!")
+                        print()
                     else:
-                        print("No record with such number")
+                        if deleteRowNumber >= 0 and deleteRowNumber < rowCount:
+                            updatedRecordList = recordList
+                            recordToDelete = updatedRecordList.pop(deleteRowNumber)
+                            print("Following record was removed frome notebook:")
+                            print(recordToDelete.replace("|"," "))
+                            file = open('NotebookTest.txt','w')
+                            i=-1
+                            for record in updatedRecordList:
+                                i=i+1
+                                subRecord = record.split("|")
+                                subRecord.__delitem__(0)
+                                subRecord.insert(0,str(i))
+                                file.write("|".join(subRecord) + '\n')
+                            file.close()
+                        else:
+                            print("No record with such number")
 
     else:
         print("Error: No such command. Please try again.")
