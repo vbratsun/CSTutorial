@@ -140,6 +140,7 @@ while True:
             noFile = 1
             file = open('Notebook.txt','w')
             file.close()
+            print()
             print("Error: File with data is not found!")
             print("*Use AddNew command to create first record in new data file")
             print()
@@ -152,7 +153,8 @@ while True:
                 rowCount = len(recordList)
                 print()
                 if rowCount==0:
-                    print("Notebook is empty.")
+                    print("Notebook is empty. Nothing to delete.")
+                    print()
                 else:
                     for record in recordList:#вывод списка построчно
                         formatRecord = record.replace("|"," ")
@@ -164,7 +166,9 @@ while True:
                     if deleteRowNumber >= 0 and deleteRowNumber < rowCount:
                         updatedRecordList = recordList
                         recordToDelete = updatedRecordList.pop(deleteRowNumber)
+                        print()
                         print("Following record was removed frome notebook:")
+                        print()
                         print(recordToDelete.replace("|"," "))
                         file = open('Notebook.txt','w')
                         i=-1
