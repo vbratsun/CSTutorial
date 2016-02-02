@@ -3,8 +3,7 @@ from builtins import print
 
 print("This is the notebook.")
 print()
-print("Today is ")
-print(datetime.today())
+print("Today is "+ str(datetime.today()))
 print()
 print("    Following actions are availabe:")
 print("    To check all the records in notebook type - ViewAll")
@@ -37,6 +36,9 @@ while True:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
+            noFile = 1
+            file = open('Notebook.txt','w')
+            file.close()
             print()
             print("Error: File with data is not found!")
             print("*Use AddNew command to create first record in new data file")
@@ -48,39 +50,88 @@ while True:
                 list = [line.strip() for line in file]
                 file.close()
                 rowCount = len(list)#это каунтер строк в книжке
-                for record in list:
-                    formatRecord = record.replace("|"," ")
-                    print(formatRecord)
-                print()
+                if rowCount==0:
+                    print("Notebook is empty. Add any records.")
+                    print()
+                else:
+                    for record in list:
+                        formatRecord = record.replace("|"," ")
+                        print(formatRecord)
+                        print()
 
     elif action=="AddNew":
         print()
 
-        print("Fill in the Surname:")
-        surname = input()
+        try:
+            file = open('Notebook.txt','r')
+        except IOError as e:
+            noFile = 1
+            file = open('Notebook.txt','w')
+            file.close()
+            file = open('Notebook.txt','r')
+            list = [line.strip() for line in file]
+            file.close()
+            rowCount = len(list)
 
-        print("Fill in the Name:")
-        name = input()
+            print("Fill in the Surname:")
+            surname = input()
 
-        print("Fill in the Second Name:")
-        secondName = input()
+            print("Fill in the Name:")
+            name = input()
 
-        print("Fill in the Phone number(+***********):")
-        phone = input()
+            print("Fill in the Second Name:")
+            secondName = input()
 
-        print("Fill in the Day of birth(dd.mm.yyyy):")
-        dob = input()
+            print("Fill in the Phone number(+***********):")
+            phone = input()
 
-        planeRecordLine = surname + " " + name + " " + secondName + " " + phone + " " + dob
-        recordLine = surname + " " + name + " " + secondName + "|" + phone + "|" + dob
-        print()
-        print("The following new record will be added to notebook:")
-        print(planeRecordLine)
-        print()
+            print("Fill in the Day of birth(dd.mm.yyyy):")
+            dob = input()
 
-        file = open('Notebook.txt','w')
-        file.write(recordLine)
-        file.close()
+            planeRecordLine = surname + " " + name + " " + secondName + " " + phone + " " + dob
+            print()
+            print("The following new record was added to notebook:")
+            print(planeRecordLine)
+            print()
+            recordLine = str(rowCount) + "|" + surname + " " + name + " " + secondName + "|" + phone + "|" + dob
+
+            file = open('Notebook.txt','a')
+            file.write(recordLine + '\n')
+            file.close()
+            #print("Error: File with data is not found!")
+            #print("*Use AddNew command to create first record in new data file")
+        else:
+            with file:
+                file = open('Notebook.txt','r')
+                list = [line.strip() for line in file]
+                file.close()
+                rowCount = len(list)
+
+                print("Fill in the Surname:")
+                surname = input()
+
+                print("Fill in the Name:")
+                name = input()
+
+                print("Fill in the Second Name:")
+                secondName = input()
+
+                print("Fill in the Phone number(+***********):")
+                phone = input()
+
+                print("Fill in the Day of birth(dd.mm.yyyy):")
+                dob = input()
+
+                planeRecordLine = surname + " " + name + " " + secondName + " " + phone + " " + dob
+                print()
+                print("The following new record was added to notebook:")
+                print(planeRecordLine)
+                print()
+                recordLine = str(rowCount) + "|" + surname + " " + name + " " + secondName + "|" + phone + "|" + dob
+
+                file = open('Notebook.txt','a')
+                file.write(recordLine + '\n')
+                file.close()
 
     else:
         print()

@@ -10,6 +10,9 @@ while True:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
+            noFile = 1
+            file = open('Notebook.txt','w')
+            file.close()
             print("Error: File with data is not found!")
             print("*Use AddNew command to create first record in new data file")
         else:
@@ -19,11 +22,13 @@ while True:
                 file.close()
                 #print(list) #просто вывод списка
                 rowCount = len(list)
-                print(rowCount)
                 print()
-                for record in list:#вывод списка построчно
-                    formatRecord = record.replace("|"," ")
-                    print(formatRecord)
+                if rowCount==0:
+                    print("Notebook is empty.")
+                else:
+                    for record in list:#вывод списка построчно
+                        formatRecord = record.replace("|"," ")
+                        print(formatRecord)
 
     else:
         print("Error: No such command. Please try again.")
