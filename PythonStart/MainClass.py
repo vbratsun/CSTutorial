@@ -250,7 +250,7 @@ while True:
                     counter=0
                     print("Type text to search:")
                     searchText=str(input())
-
+                    print()
                     for record in list:
                         if searchText in record:
                             counter=counter+1
