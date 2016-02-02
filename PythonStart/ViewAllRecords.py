@@ -1,7 +1,3 @@
-from datetime import datetime, date, time
-
-print(datetime.today())
-
 print ("To check all the records in notebook type - ViewAll")
 while True:
     viewAll = input()
