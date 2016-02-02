@@ -1,13 +1,8 @@
-from datetime import datetime, date, time
-from builtins import print
-
-print(date.today())
-
-print("To check if anyone has birthday type - Bday")
+print("To find record in notebook type - FindOne")
 
 while True:
     action = input()
-    expected = "Bday"
+    expected = "FindOne"
     if expected == action:
         try:
             file = open('NotebookTest.txt','r')
@@ -21,23 +16,22 @@ while True:
                 file = open('NotebookTest.txt','r')
                 list = [line.strip() for line in file]
                 file.close()
-                #print(list) #просто вывод списка
                 rowCount = len(list)
                 print()
                 if rowCount==0:
                     print("Notebook is empty.")
                 else:
-                    birthdayCounter=0
-                    dateToday=str(date.today())
-                    partOfDate = dateToday[4:10]
+                    counter=0
+                    print("Type exact name:")
+                    searchText=str(input())
 
                     for record in list:
-                        if partOfDate in record:
-                            birthdayCounter=birthdayCounter+1
+                        if searchText in record:
+                            counter=counter+1
                             print(record.replace("|"," "))
 
-                    if birthdayCounter==0:
-                        print("No one has birthday today.")
+                    if counter==0:
+                        print("Nothing is found.")
                         print()
 
     else:

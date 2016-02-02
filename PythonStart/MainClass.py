@@ -5,13 +5,13 @@ print("This is the notebook.")
 print()
 print("Today is "+ str(date.today()))
 print()
-print("    Following actions are availabe:")
+print("Following actions are availabe:")
 print("    To check all the records in notebook type - ViewAll")
 print("    To add new record type  - AddNew ")
 print("    To delete existing record type - DeleteOne")
+print("    To check if anyone has birthday type - Bday")
 print("    To get help type - Help")
 print("    To exit the notebook type - Quit")
-print("    To check if anyone has birthday type - Bday")
 print()
 
 while True:
@@ -20,13 +20,13 @@ while True:
     action = input()
     if action == "Help":
         print()
-        print("    Following actions are availabe:")
+        print("Following actions are availabe:")
         print("    To check all the records in notebook type - ViewAll")
         print("    To add new record type  - AddNew ")
         print("    To delete existing record type - DeleteOne")
+        print("    To check if anyone has birthday type - Bday")
         print("    To get help type - Help")
         print("    To exit the notebook type - Quit")
-        print("    To check if anyone has birthday type - Bday")
         print()
 
     elif action==leave:
@@ -98,8 +98,7 @@ while True:
             file = open('Notebook.txt','a')
             file.write(recordLine + '\n')
             file.close()
-            #print("Error: File with data is not found!")
-            #print("*Use AddNew command to create first record in new data file")
+
         else:
             with file:
                 file = open('Notebook.txt','r')
@@ -148,7 +147,6 @@ while True:
                 file = open('Notebook.txt','r')
                 recordList = [line.strip() for line in file]
                 file.close()
-                #print(list) #просто вывод списка
                 rowCount = len(recordList)
                 print()
                 if rowCount==0:
@@ -172,8 +170,8 @@ while True:
                             recordToDelete = updatedRecordList.pop(deleteRowNumber)
                             print()
                             print("Following record was removed frome notebook:")
-                            print()
                             print(recordToDelete.replace("|"," "))
+                            print()
                             file = open('Notebook.txt','w')
                             i=-1
                             for record in updatedRecordList:
@@ -187,6 +185,70 @@ while True:
                             print()
                             print("No record with such number")
                             print()
+    elif action=="Bday":
+        try:
+            file = open('Notebook.txt','r')
+        except IOError as e:
+            file = open('Notebook.txt','w')
+            file.close()
+            print()
+            print("Error: File with data is not found!")
+            print("*Use AddNew command to create first record in new data file")
+            print()
+        else:
+            with file:
+                file = open('Notebook.txt','r')
+                list = [line.strip() for line in file]
+                file.close()
+                rowCount = len(list)
+                print()
+                if rowCount==0:
+                    print("Notebook is empty. No birthdays to display.")
+                    print()
+                else:
+                    birthdayCounter=0
+                    dateToday=str(date.today())
+                    partOfDate = dateToday[4:10]
+
+                    for record in list:
+                        if partOfDate in record:
+                            birthdayCounter=birthdayCounter+1
+                            print(record.replace("|"," "))
+
+                    if birthdayCounter==0:
+                        print("No one has birthday today.")
+                        print()
+
+    elif action=="FindOne":
+        try:
+            file = open('Notebook.txt','r')
+        except IOError as e:
+            file = open('Notebook.txt','w')
+            file.close()
+            print("Error: File with data is not found!")
+            print("*Use AddNew command to create first record in new data file")
+        else:
+            with file:
+                file = open('Notebook.txt','r')
+                list = [line.strip() for line in file]
+                file.close()
+                rowCount = len(list)
+                print()
+                if rowCount==0:
+                    print("Notebook is empty.")
+                else:
+                    counter=0
+                    print("Type exact name:")
+                    searchText=str(input())
+
+                    for record in list:
+                        if searchText in record:
+                            counter=counter+1
+                            print(record.replace("|"," "))
+
+                    if counter==0:
+                        print("Nothing is found.")
+                        print()
 
     else:
         print()
