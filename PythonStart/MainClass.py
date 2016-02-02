@@ -38,7 +38,6 @@ while True:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
-            noFile = 1
             file = open('Notebook.txt','w')
             file.close()
             print()
@@ -67,7 +66,6 @@ while True:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
-            noFile = 1
             file = open('Notebook.txt','w')
             file.close()
             file = open('Notebook.txt','r')
@@ -87,7 +85,7 @@ while True:
             print("Fill in the Phone number(+***********):")
             phone = input()
 
-            print("Fill in the Day of birth(dd.mm.yyyy):")
+            print("Fill in the Day of birth(yyyy-mm-dd):")
             dob = input()
 
             planeRecordLine = surname + " " + name + " " + secondName + " " + phone + " " + dob
@@ -139,7 +137,6 @@ while True:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
-            noFile = 1
             file = open('Notebook.txt','w')
             file.close()
             print()
