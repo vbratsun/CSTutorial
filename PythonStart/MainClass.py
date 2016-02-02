@@ -240,7 +240,7 @@ while True:
                     print("Notebook is empty.")
                 else:
                     counter=0
-                    print("Type exact name:")
+                    print("Type text to search:")
                     searchText=str(input())
 
                     for record in list:
