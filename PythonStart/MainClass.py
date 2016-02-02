@@ -15,11 +15,19 @@ print("    To get help type - Help")
 print("    To exit the notebook type - Quit")
 print()
 
+viewAll = "ViewAll"
+addNew = "AddNew"
+deleteOne = "DeleteOne"
+findOne = "FindOne"
+bDay = "Bday"
+help = "Help"
+leave = "Quit"
+
 while True:
-    leave = "Quit"
+    #leave = "Quit"
     print("Please type the action: ")
     action = input()
-    if action == "Help":
+    if action == help:
         print()
         print("Following actions are availabe:")
         print("    To check all the records in notebook type - ViewAll")
@@ -36,7 +44,7 @@ while True:
         print("See you later!")
         quit()
 
-    elif action=="ViewAll":
+    elif action==viewAll:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -62,7 +70,7 @@ while True:
                         print(formatRecord)
                         print()
 
-    elif action=="AddNew":
+    elif action==addNew:
         print()
 
         try:
@@ -134,7 +142,7 @@ while True:
                 file.write(recordLine + '\n')
                 file.close()
 
-    elif action=="DeleteOne":
+    elif action==deleteOne:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -187,7 +195,7 @@ while True:
                             print()
                             print("No record with such number")
                             print()
-    elif action=="Bday":
+    elif action==bDay:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -221,7 +229,7 @@ while True:
                         print("No one has birthday today.")
                         print()
 
-    elif action=="FindOne":
+    elif action==findOne:
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
