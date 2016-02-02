@@ -120,7 +120,7 @@ while True:
                 print("Fill in the Phone number(+***********):")
                 phone = input()
 
-                print("Fill in the Day of birth(dd.mm.yyyy):")
+                print("Fill in the Day of birth(yyyy-mm-dd):")
                 dob = input()
 
                 planeRecordLine = str(rowCount) + " " + surname + " " + name + " " + secondName + " " + phone + " " + dob
