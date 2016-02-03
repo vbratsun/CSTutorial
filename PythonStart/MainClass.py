@@ -20,14 +20,14 @@ addNew = "AddNew"
 deleteOne = "DeleteOne"
 findOne = "FindOne"
 bDay = "Bday"
-help = "Help"
+helpp = "Help"
 leave = "Quit"
 
 while True:
     #leave = "Quit"
     print("Please type the action: ")
     action = input()
-    if action == help:
+    if action == helpp:
         print()
         print("Following actions are availabe:")
         print("    To check all the records in notebook type - ViewAll")
@@ -249,10 +249,11 @@ while True:
                 else:
                     counter=0
                     print("Type text to search:")
-                    searchText=str(input())
+                    searchText=str(input()).lower()
                     print()
                     for record in list:
-                        if searchText in record:
+                        modRecord = str(record).lower()
+                        if searchText in modRecord:
                             counter=counter+1
                             print(record.replace("|"," "))
 

@@ -1,9 +1,10 @@
 from datetime import datetime, date, time
 from builtins import print
 
-print(date.today())
 
-print("To check if anyone has birthday type - Bday")
+def main():
+    print(date.today())
+    print("To check if anyone has birthday type - Bday")
 
 while True:
     action = input()

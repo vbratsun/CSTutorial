@@ -23,10 +23,12 @@ while True:
                 else:
                     counter=0
                     print("Type exact name:")
-                    searchText=str(input())
+                    searchText=str(input()).lower()
 
                     for record in list:
-                        if searchText in record:
+                        modRecord = str(record).lower()
+
+                        if searchText in modRecord:
                             counter=counter+1
                             print(record.replace("|"," "))
 
