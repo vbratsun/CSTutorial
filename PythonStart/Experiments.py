@@ -3,6 +3,7 @@ from builtins import print
 
 notebookFile = 'ZZZ.txt'
 
+
 def fileExistCheck(n):
     try:
         file = open(notebookFile,'r')
