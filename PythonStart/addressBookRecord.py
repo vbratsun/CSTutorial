@@ -30,12 +30,13 @@ class AddressBook:
         self.saveToFile()
     
     def loadFromFile(self):
+        self.records = []
         if not os.path.isfile(self.fileName):
-            return
+            return True
         
         if not os.access(self.fileName, os.R_OK):
             print("File is not readable")
-            return
+            return False
         
         try:
             with open(self.fileName, 'r') as file:                
@@ -52,9 +53,11 @@ class AddressBook:
                         record.phone = recordFields[3]
                         record.dob = recordFields[4]                        
                         self.records.append(record)
-            
+            return True
+
         except Exception as e:
-            print("Error while trying read file: " + e.message)      
+            print("Error while trying read file: " + e.message)
+            return False
         
     def saveToFile(self):
         try:
@@ -96,7 +99,9 @@ def doActionAllRecords():
     
 
 addressBook = AddressBook("Notebook.txt")
-addressBook.loadFromFile()
+#addressBook.loadFromFile()
+if not addressBook.loadFromFile():
+    quit()
 
 while True:
     print("Please type the action: ")
