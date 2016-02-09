@@ -14,6 +14,14 @@ class AdressBookRecord:
             print("Invalid phone number. Insert phone in correct format.")
             return False
 
+    def dateVerification(value):
+        rule = re.compile(r'(^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])$)')
+        if rule.search(value):
+            return True
+        else:
+            print("invalid date format")
+            return False
+
 class AdressBookActions:
     #def __init__(self, filename):
     #    self.fileName = filename
@@ -91,6 +99,8 @@ class AdressBookActions:
 
             print("Fill in the Day of birth(yyyy-mm-dd):")
             dob = input()
+            if not AdressBookRecord.dateVerification(dob):
+                dob = input()
 
             planeRecordLine = surname + " " + name + " " + secondName + " " + phone + " " + dob
             print()
@@ -126,6 +136,8 @@ class AdressBookActions:
 
                 print("Fill in the Day of birth(yyyy-mm-dd):")
                 dob = input()
+                while not AdressBookRecord.dateVerification(dob):
+                    dob = input()
 
                 planeRecordLine = str(rowCount) + " " + surname + " " + name + " " + secondName + " " + phone + " " + dob
                 print()
