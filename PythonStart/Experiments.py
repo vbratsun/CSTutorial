@@ -4,6 +4,16 @@ from _ast import Try
 import os.path
 import re
 
+class AdressBookRecord:
+
+    def phoneVerification(value):
+        rule = re.compile(r'(^[+0-9]{1,3})*([0-9]{10,11}$)')
+        if rule.search(value):
+            return True
+        else:
+            print("Invalid phone number. Insert phone in correct format.")
+            return False
+
 class AdressBookActions:
     #def __init__(self, filename):
     #    self.fileName = filename
@@ -76,6 +86,8 @@ class AdressBookActions:
 
             print("Fill in the Phone number(+***********):")
             phone = input()
+            while not AdressBookRecord.phoneVerification(phone):
+                phone = input()
 
             print("Fill in the Day of birth(yyyy-mm-dd):")
             dob = input()
@@ -109,6 +121,8 @@ class AdressBookActions:
 
                 print("Fill in the Phone number(+***********):")
                 phone = input()
+                while not AdressBookRecord.phoneVerification(phone):
+                   phone = input()
 
                 print("Fill in the Day of birth(yyyy-mm-dd):")
                 dob = input()

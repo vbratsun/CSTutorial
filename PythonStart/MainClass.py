@@ -5,8 +5,8 @@ import os.path
 import re
 
 class AdressBookActions:
-    def __init__(self, filename):
-        self.fileName = filename
+    #def __init__(self, filename):
+    #    self.fileName = filename
 
     def getHelp():
         print()
@@ -28,9 +28,9 @@ class AdressBookActions:
 
     def viewAllRecords():
         try:
-            file = open('Notebook.txt','r')
+            file = open(_fileName,'r')
         except IOError as e:
-            file = open('Notebook.txt','w')
+            file = open(_fileName,'w')
             file.close()
             print()
             print("Error: File with data is not found!")
@@ -38,7 +38,7 @@ class AdressBookActions:
             print()
         else:
             with file:
-                file = open('Notebook.txt','r')
+                file = open(_fileName,'r')
                 print()
                 list = [line.strip() for line in file]
                 file.close()
@@ -56,11 +56,11 @@ class AdressBookActions:
         print()
 
         try:
-            file = open('Notebook.txt','r')
+            file = open(_fileName,'r')
         except IOError as e:
-            file = open('Notebook.txt','w')
+            file = open(_fileName,'w')
             file.close()
-            file = open('Notebook.txt','r')
+            file = open(_fileName,'r')
             list = [line.strip() for line in file]
             file.close()
             rowCount = len(list)
@@ -87,13 +87,13 @@ class AdressBookActions:
             print()
             recordLine = str(rowCount) + "|" + surname + " " + name + " " + secondName + "|" + phone + "|" + dob
 
-            file = open('Notebook.txt','a')
+            file = open(_fileName,'a')
             file.write(recordLine + '\n')
             file.close()
 
         else:
             with file:
-                file = open('Notebook.txt','r')
+                file = open(_fileName,'r')
                 list = [line.strip() for line in file]
                 file.close()
                 rowCount = len(list)
@@ -120,15 +120,15 @@ class AdressBookActions:
                 print()
                 recordLine = str(rowCount) + "|" + surname + " " + name + " " + secondName + "|" + phone + "|" + dob
 
-                file = open('Notebook.txt','a')
+                file = open(_fileName,'a')
                 file.write(recordLine + '\n')
                 file.close()
 
     def deleteOneRecord():
         try:
-            file = open('Notebook.txt','r')
+            file = open(_fileName,'r')
         except IOError as e:
-            file = open('Notebook.txt','w')
+            file = open(_fileName,'w')
             file.close()
             print()
             print("Error: File with data is not found!")
@@ -136,7 +136,7 @@ class AdressBookActions:
             print()
         else:
             with file:
-                file = open('Notebook.txt','r')
+                file = open(_fileName,'r')
                 recordList = [line.strip() for line in file]
                 file.close()
                 rowCount = len(recordList)
@@ -164,7 +164,7 @@ class AdressBookActions:
                             print("Following record was removed frome notebook:")
                             print(recordToDelete.replace("|"," "))
                             print()
-                            file = open('Notebook.txt','w')
+                            file = open(_fileName,'w')
                             i=-1
                             for record in updatedRecordList:
                                 i=i+1
@@ -180,9 +180,9 @@ class AdressBookActions:
 
     def getBirthDays():
         try:
-            file = open('Notebook.txt','r')
+            file = open(_fileName,'r')
         except IOError as e:
-            file = open('Notebook.txt','w')
+            file = open(_fileName,'w')
             file.close()
             print()
             print("Error: File with data is not found!")
@@ -190,7 +190,7 @@ class AdressBookActions:
             print()
         else:
             with file:
-                file = open('Notebook.txt','r')
+                file = open(_fileName,'r')
                 list = [line.strip() for line in file]
                 file.close()
                 rowCount = len(list)
@@ -217,15 +217,15 @@ class AdressBookActions:
 
     def findOneRecord():
         try:
-            file = open('Notebook.txt','r')
+            file = open(_fileName,'r')
         except IOError as e:
-            file = open('Notebook.txt','w')
+            file = open(_fileName,'w')
             file.close()
             print("Error: File with data is not found!")
             print("*Use AddNew command to create first record in new data file")
         else:
             with file:
-                file = open('Notebook.txt','r')
+                file = open(_fileName,'r')
                 list = [line.strip() for line in file]
                 file.close()
                 rowCount = len(list)
@@ -248,7 +248,7 @@ class AdressBookActions:
                         print()
 
     def clearAdressBook():
-        file = open('Notebook.txt','w')
+        file = open(_fileName,'w')
         file.close()
         print()
         print("All records were removed from notebook.")
@@ -261,6 +261,8 @@ class AppHeader:
         print("Today is "+ str(date.today()))
         AdressBookActions.getHelp()
         print()
+
+_fileName = "Notebook.txt"
 
 AppHeader.inform()
 AdressBookActions.getBirthDays()
