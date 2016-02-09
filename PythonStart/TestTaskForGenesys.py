@@ -177,6 +177,7 @@ class AdressBookActions:
                             print()
                             print("No record with such number")
                             print()
+
     def getBirthDays():
         try:
             file = open('Notebook.txt','r')
@@ -250,14 +251,16 @@ class AdressBookActions:
         print("All records were removed from notebook.")
         print()
 
-def inform():
-    print("This is the notebook.v0.2")
-    print()
-    print("Today is "+ str(date.today()))
-    AdressBookActions.getHelp()
-    print()
+class AppHeader:
+    def inform():
+        print("This is the notebook.v0.2")
+        print()
+        print("Today is "+ str(date.today()))
+        AdressBookActions.getHelp()
+        print()
 
-inform()
+AppHeader.inform()
+AdressBookActions.getBirthDays()
 
 while True:
     print("Please type the action: ")
