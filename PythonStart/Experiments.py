@@ -16,6 +16,7 @@ class AdressBookActions:
         print("    To delete existing record type - DeleteOne")
         print("    To find record in notebook type - FindOne")
         print("    To check if anyone has birthday type - Bday")
+        print("    To clear the notebook type - Clear")
         print("    To get help type - Help")
         print("    To exit the notebook type - Quit")
         print()
@@ -242,6 +243,13 @@ class AdressBookActions:
                         print("Nothing is found.")
                         print()
 
+    def clearAdressBook():
+        file = open('Notebook.txt','w')
+        file.close()
+        print()
+        print("All records were removed from notebook.")
+        print()
+
 def inform():
     print("This is the notebook.v0.2")
     print()
@@ -269,6 +277,8 @@ while True:
         AdressBookActions.findOneRecord()
     elif action.lower()=="bday":
         AdressBookActions.getBirthDays()
+    elif action.lower()=="clear":
+        AdressBookActions.clearAdressBook()
     else:
         print()
         print("Error: No such command. Please try again.")
