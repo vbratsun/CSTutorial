@@ -1,33 +1,14 @@
 from datetime import datetime, date, time
 from builtins import print
+from _ast import Try
+import os.path
+import re
 
-print("This is the notebook.")
-print()
-print("Today is "+ str(date.today()))
-print()
-print("Following actions are availabe:")
-print("    To check all the records in notebook type - ViewAll")
-print("    To add new record type  - AddNew ")
-print("    To delete existing record type - DeleteOne")
-print("    To find record in notebook type - FindOne")
-print("    To check if anyone has birthday type - Bday")
-print("    To get help type - Help")
-print("    To exit the notebook type - Quit")
-print()
+class AdressBookActions:
+    def __init__(self, filename):
+        self.fileName = filename
 
-viewAll = "ViewAll"
-addNew = "AddNew"
-deleteOne = "DeleteOne"
-findOne = "FindOne"
-bDay = "Bday"
-helpp = "Help"
-leave = "Quit"
-
-while True:
-    #leave = "Quit"
-    print("Please type the action: ")
-    action = input()
-    if action == helpp:
+    def getHelp():
         print()
         print("Following actions are availabe:")
         print("    To check all the records in notebook type - ViewAll")
@@ -35,16 +16,17 @@ while True:
         print("    To delete existing record type - DeleteOne")
         print("    To find record in notebook type - FindOne")
         print("    To check if anyone has birthday type - Bday")
+        print("    To clear the notebook type - Clear")
         print("    To get help type - Help")
         print("    To exit the notebook type - Quit")
         print()
 
-    elif action==leave:
+    def leave():
         print()
         print("See you later!")
         quit()
 
-    elif action==viewAll:
+    def viewAllRecords():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -70,7 +52,7 @@ while True:
                         print(formatRecord)
                         print()
 
-    elif action==addNew:
+    def addNewRecord():
         print()
 
         try:
@@ -142,7 +124,7 @@ while True:
                 file.write(recordLine + '\n')
                 file.close()
 
-    elif action==deleteOne:
+    def deleteOneRecord():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -195,7 +177,8 @@ while True:
                             print()
                             print("No record with such number")
                             print()
-    elif action==bDay:
+
+    def getBirthDays():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -211,7 +194,6 @@ while True:
                 list = [line.strip() for line in file]
                 file.close()
                 rowCount = len(list)
-                print()
                 if rowCount==0:
                     print("Notebook is empty. No birthdays to display.")
                     print()
@@ -219,17 +201,21 @@ while True:
                     birthdayCounter=0
                     dateToday=str(date.today())
                     partOfDate = dateToday[4:10]
+                    bdayList = ""
 
                     for record in list:
                         if partOfDate in record:
                             birthdayCounter=birthdayCounter+1
-                            print(record.replace("|"," "))
+                            bdayList = bdayList +"\n"+ record.replace("|"," ")
+                    print("Following people have birthday today:")
+                    print(bdayList)
+                    print()
 
                     if birthdayCounter==0:
                         print("No one has birthday today.")
                         print()
 
-    elif action==findOne:
+    def findOneRecord():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -261,6 +247,44 @@ while True:
                         print("Nothing is found.")
                         print()
 
+    def clearAdressBook():
+        file = open('Notebook.txt','w')
+        file.close()
+        print()
+        print("All records were removed from notebook.")
+        print()
+
+class AppHeader:
+    def inform():
+        print("This is the notebook.v0.2")
+        print()
+        print("Today is "+ str(date.today()))
+        AdressBookActions.getHelp()
+        print()
+
+AppHeader.inform()
+AdressBookActions.getBirthDays()
+
+while True:
+    print("Please type the action: ")
+    action = input()
+
+    if action.lower()=="quit":
+        AdressBookActions.leave()
+    elif action.lower()=="help":
+        AdressBookActions.getHelp()
+    elif action.lower()=="viewall":
+        AdressBookActions.viewAllRecords()
+    elif action.lower()=="addnew":
+        AdressBookActions.addNewRecord()
+    elif action.lower()=="deleteone":
+        AdressBookActions.deleteOneRecord()
+    elif action.lower()=="findone":
+        AdressBookActions.findOneRecord()
+    elif action.lower()=="bday":
+        AdressBookActions.getBirthDays()
+    elif action.lower()=="clear":
+        AdressBookActions.clearAdressBook()
     else:
         print()
         print("Error: No such command. Please try again.")
