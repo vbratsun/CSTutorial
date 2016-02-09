@@ -1,33 +1,14 @@
 from datetime import datetime, date, time
 from builtins import print
+from _ast import Try
+import os.path
+import re
 
-print("This is the notebook.")
-print()
-print("Today is "+ str(date.today()))
-print()
-print("Following actions are availabe:")
-print("    To check all the records in notebook type - ViewAll")
-print("    To add new record type  - AddNew ")
-print("    To delete existing record type - DeleteOne")
-print("    To find record in notebook type - FindOne")
-print("    To check if anyone has birthday type - Bday")
-print("    To get help type - Help")
-print("    To exit the notebook type - Quit")
-print()
+class AdressBookActions:
+    def __init__(self, filename):
+        self.fileName = filename
 
-viewAll = "ViewAll"
-addNew = "AddNew"
-deleteOne = "DeleteOne"
-findOne = "FindOne"
-bDay = "Bday"
-help = "Help"
-leave = "Quit"
-
-while True:
-    #leave = "Quit"
-    print("Please type the action: ")
-    action = input()
-    if action == help:
+    def getHelp():
         print()
         print("Following actions are availabe:")
         print("    To check all the records in notebook type - ViewAll")
@@ -39,12 +20,12 @@ while True:
         print("    To exit the notebook type - Quit")
         print()
 
-    elif action==leave:
+    def leave():
         print()
         print("See you later!")
         quit()
 
-    elif action==viewAll:
+    def viewAllRecords():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -70,7 +51,7 @@ while True:
                         print(formatRecord)
                         print()
 
-    elif action==addNew:
+    def addNewRecord():
         print()
 
         try:
@@ -142,7 +123,7 @@ while True:
                 file.write(recordLine + '\n')
                 file.close()
 
-    elif action==deleteOne:
+    def deleteOneRecord():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -195,7 +176,7 @@ while True:
                             print()
                             print("No record with such number")
                             print()
-    elif action==bDay:
+    def getBirthDays():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -229,7 +210,7 @@ while True:
                         print("No one has birthday today.")
                         print()
 
-    elif action==findOne:
+    def findOneRecord():
         try:
             file = open('Notebook.txt','r')
         except IOError as e:
@@ -249,10 +230,11 @@ while True:
                 else:
                     counter=0
                     print("Type text to search:")
-                    searchText=str(input())
+                    searchText=str(input()).lower()
                     print()
                     for record in list:
-                        if searchText in record:
+                        modRecord = str(record).lower()
+                        if searchText in modRecord:
                             counter=counter+1
                             print(record.replace("|"," "))
 
@@ -260,6 +242,33 @@ while True:
                         print("Nothing is found.")
                         print()
 
+def inform():
+    print("This is the notebook.v0.2")
+    print()
+    print("Today is "+ str(date.today()))
+    AdressBookActions.getHelp()
+    print()
+
+inform()
+
+while True:
+    print("Please type the action: ")
+    action = input()
+
+    if action.lower()=="quit":
+        AdressBookActions.leave()
+    elif action.lower()=="help":
+        AdressBookActions.getHelp()
+    elif action.lower()=="viewall":
+        AdressBookActions.viewAllRecords()
+    elif action.lower()=="addnew":
+        AdressBookActions.addNewRecord()
+    elif action.lower()=="deleteone":
+        AdressBookActions.deleteOneRecord()
+    elif action.lower()=="findone":
+        AdressBookActions.findOneRecord()
+    elif action.lower()=="bday":
+        AdressBookActions.getBirthDays()
     else:
         print()
         print("Error: No such command. Please try again.")
