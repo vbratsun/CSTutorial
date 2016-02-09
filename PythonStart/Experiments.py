@@ -194,7 +194,6 @@ class AdressBookActions:
                 list = [line.strip() for line in file]
                 file.close()
                 rowCount = len(list)
-                print()
                 if rowCount==0:
                     print("Notebook is empty. No birthdays to display.")
                     print()
@@ -202,11 +201,15 @@ class AdressBookActions:
                     birthdayCounter=0
                     dateToday=str(date.today())
                     partOfDate = dateToday[4:10]
+                    bdayList = ""
 
                     for record in list:
                         if partOfDate in record:
                             birthdayCounter=birthdayCounter+1
-                            print(record.replace("|"," "))
+                            bdayList = bdayList +"\n"+ record.replace("|"," ")
+                    print("Following people have birthday today:")
+                    print(bdayList)
+                    print()
 
                     if birthdayCounter==0:
                         print("No one has birthday today.")
