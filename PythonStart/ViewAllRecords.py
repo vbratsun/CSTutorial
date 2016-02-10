@@ -1,30 +1,77 @@
-print ("To check all the records in notebook type - ViewAll")
+import os.path
+
+class RecordStructure:
+
+    def __init__(self):
+        pass
+
+    def getRecordId(self):
+        return self.recordId
+
+    def setRecordId(self, value):
+        self.recordId = value
+
+
+
+    def getUserName(self):
+        return self.userName
+
+    def setUserName(self, value):
+        self.userName = value
+
+
+
+    def getUserPhoneNumber(self):
+        return self.userPhoneNumber
+
+    def setUserPhoneNumber(self, value):
+        self.userPhoneNumber = value
+
+    def getUserDob(self):
+        return self.userDob
+
+    def setUserDob(self, value):
+        self.userDob = value
+
+class AdressBookActions:
+
+    def __init__(self, filename):
+        self.fileName = filename
+
+    def loadFromFile(self):
+        self.records = []
+        file = open(self.fileName,'r')
+        data = file.read()
+        recordLines = data.splitlines()
+        #self.records = []
+        for recordLine in recordLines:
+            recordFields = recordLine.split("|")
+            if len(recordFields) == 6:
+                record = RecordStructure()
+                record.id = recordFields[0]
+                record.surname = recordFields[1]
+                record.name = recordFields[2]
+                record.fathersName = recordFields[3]
+                record.phone = recordFields[4]
+                record.dob = recordFields[5]
+                self.records.append(record)
+
+class UserActions:
+    def doActionAllRecords():
+        for record in adressBookActions.records:
+            print(record.id + "|" + record.surname + "|" + record.name + "|" + record.secondName + "|" + record.phone + "|" + record.dob + "|")
+
+
+adressBookActions = AdressBookActions("NotebookTest.txt")
+
+adressBookActions.loadFromFile()
+
 while True:
-    viewAll = input()
-    expected = "ViewAll"
-    if expected==viewAll:
-        try:
-            file = open('Notebook.txt','r')
-        except IOError as e:
-            noFile = 1
-            file = open('Notebook.txt','w')
-            file.close()
-            print("Error: File with data is not found!")
-            print("*Use AddNew command to create first record in new data file")
-        else:
-            with file:
-                file = open('Notebook.txt','r')
-                list = [line.strip() for line in file]
-                file.close()
-                #print(list) #просто вывод списка
-                rowCount = len(list)
-                print()
-                if rowCount==0:
-                    print("Notebook is empty.")
-                else:
-                    for record in list:#вывод списка построчно
-                        formatRecord = record.replace("|"," ")
-                        print(formatRecord)
+    print("Please type the action: ")
+    action = input()
+
+    if action.lower() == "all":
+        UserActions.doActionAllRecords()
 
     else:
         print("Error: No such command. Please try again.")
