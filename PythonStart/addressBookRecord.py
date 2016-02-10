@@ -39,7 +39,7 @@ class AddressBook:
             return False
         
         try:
-            with open(self.fileName, 'r') as file:                
+            with open(self.fileName, 'r') as file:
                 data = file.read()
                 recordLines = data.splitlines()
                 self.records = []
@@ -97,7 +97,7 @@ def doActionAllRecords():
         print(record.surname + "|" + record.name + "|" + record.secondName + "|" + record.phone + "|" + record.dob + "|")
     
 
-addressBook = AddressBook("Notebook.txt")
+addressBook = AddressBook("NotebookTest.txt")
 #addressBook.loadFromFile()
 if not addressBook.loadFromFile():
     quit()
