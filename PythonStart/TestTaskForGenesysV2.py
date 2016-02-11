@@ -156,7 +156,7 @@ def doActionFindRecord():
 
 #main section start
 
-addressBookActions = AddressBookActions("NotebookTest.txt")
+addressBookActions = AddressBookActions("NotebookV2.txt")
 
 while True:
     print("Please type the action: ")
