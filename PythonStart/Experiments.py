@@ -4,6 +4,7 @@ from _ast import Try
 import os.path
 import re
 
+
 class AdressBookRecord:
 
     def phoneVerification(value):
@@ -22,9 +23,8 @@ class AdressBookRecord:
             print("invalid date format")
             return False
 
+
 class AdressBookActions:
-    #def __init__(self, filename):
-    #    self.fileName = filename
 
     def getHelp():
         print()
@@ -280,6 +280,7 @@ class AdressBookActions:
         print("All records were removed from notebook.")
         print()
 
+
 class AppHeader:
     def inform():
         print("This is the notebook.v0.2")
@@ -287,6 +288,7 @@ class AppHeader:
         print("Today is "+ str(date.today()))
         AdressBookActions.getHelp()
         print()
+
 
 _fileName = "Notebook.txt"
 

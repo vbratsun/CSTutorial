@@ -1,3 +1,4 @@
+from datetime import datetime, date, time
 import os.path
 
 class RecordStructure:
@@ -90,6 +91,13 @@ class AddressBookActions:
         return len(self.records)
 
 
+def doActionInform():
+    print("This is the notebook. v0.4")
+    print()
+    print("Today is "+ str(date.today()))
+    doActionHelp()
+    print()
+
 def doActionLeave():
     print()
     print("See you later!")
@@ -142,7 +150,7 @@ def doActionClearAddressbook():
 
 def doActionFindRecord():
     addressBookActions.loadFromFile()
-    print("insert search text:")
+    print("Insert search text:")
     searchText = input()
     result = []
     for record in addressBookActions.records:
@@ -151,24 +159,30 @@ def doActionFindRecord():
         if searchText in recorAsString:
             result.append(record)
 
-    for record in result:
-        print(str(record.recordId) + "|" + record.userSurname + "|" + record.userName + "|" + record.userFathersName + "|" + record.userPhoneNumber + "|" + record.userDob)
+    if result:
+        print("These items fit search criteria:")
+        for record in result:
+            print(str(record.recordId) + "|" + record.userSurname + "|" + record.userName + "|" + record.userFathersName + "|" + record.userPhoneNumber + "|" + record.userDob)
+    else:
+        print("Nothing is found.")
+        print()
 
 #main section start
 
-addressBookActions = AddressBookActions("NotebookV2.txt")
+doActionInform()
+addressBookActions = AddressBookActions("NotebookTest.txt")
 
 while True:
     print("Please type the action: ")
     action = input()
 
-    if action.lower() == "all":
+    if action.lower() == "viewall":
         doActionGetAllRecords()
-    elif action.lower() == "add":
+    elif action.lower() == "addnew":
         doActionAddNewRecord()
     elif action.lower() == "clear":
         doActionClearAddressbook()
-    elif action.lower() == "find":
+    elif action.lower() == "findone":
         doActionFindRecord()
     elif action.lower() == "quit":
         doActionLeave()
@@ -176,3 +190,4 @@ while True:
         doActionHelp()
     else:
         print("Error: No such command. Please try again.")
+        print()
