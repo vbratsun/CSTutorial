@@ -52,6 +52,10 @@ class AddressBookActions:
         self.records.append(record)
         self.saveToFile()
 
+    def deleteRecord(self, record):
+        self.records.remove(record)
+        self.saveToFile()
+
     def loadFromFile(self):
         self.records = []
         file = open(self.fileName,'r')
@@ -143,6 +147,7 @@ def doActionAddNewRecord():
 
     print("Fill in the Day of birth(yyyy-mm-dd):")
     record.setUserDob(input())
+
     addressBookActions.addRecord(record)
 
 def doActionClearAddressbook():
@@ -167,6 +172,20 @@ def doActionFindRecord():
         print("Nothing is found.")
         print()
 
+def doActionDeleteRecord():
+    addressBookActions.loadFromFile()
+    #doActionGetAllRecords()
+    i=0
+    print("Enter the id of record to delete:")
+    delete = input()
+    for record in addressBookActions.records:
+        if delete == record.recordId:
+            i=1
+            addressBookActions.deleteRecord(record)
+    if i==0:
+        print("No such record.")
+
+
 #main section start
 
 doActionInform()
@@ -188,6 +207,8 @@ while True:
         doActionLeave()
     elif action.lower() == "help":
         doActionHelp()
+    elif action.lower() == "deleteone":
+        doActionDeleteRecord()
     else:
         print("Error: No such command. Please try again.")
         print()
