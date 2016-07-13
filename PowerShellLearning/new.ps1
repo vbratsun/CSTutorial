@@ -1,0 +1,1 @@
+$response = Invoke-WebRequest -Uri 'http://google.ru' -Method Get -ContentType "application/json; charset=utf-8"
